@@ -8,14 +8,16 @@ require('dotenv').config()
 //Username: mrendondemelo
 //Password: 1Q4Wt60bwdetmDHr
 
+//("mongodb+srv://mrendondemelo:1Q4Wt60bwdetmDHr@cluster0.fdndmue.mongodb.net/mi_blog")
 
 const Password = process.env.PASSWORD;
 const user = process.env.USER;
 
+//(`mongodb+srv://${user}:${Password}@cluster0.fdndmue.mongodb.net/mi_blog`)
 
 const connection = async () => {
     try{
-        await mongoose.connect("mongodb+srv://mrendondemelo:1Q4Wt60bwdetmDHr@cluster0.fdndmue.mongodb.net/mi_blog")
+        await mongoose.connect(`mongodb+srv://${user}:${Password}@cluster0.fdndmue.mongodb.net/mi_blog`)
 
         console.log("Conectado correctamente a la base de datos")
 
