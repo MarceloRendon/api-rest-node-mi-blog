@@ -7,3 +7,6 @@ En la terminal, abrir carpeta del proyecto y ejecutar comando npm install
 
 Levantar servidor back-end:
 En la terminal, abrir carpeta del proyecto y ejecutar nodemon index.js e ir a localhost
+
+Deploy en render:
+https://api-rest-node-mi-blog-marcelo-rendon.onrender.com/api/articulo/all
