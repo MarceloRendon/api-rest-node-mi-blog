@@ -2,6 +2,7 @@ const {connection} = require("./database/connection");
 const express = require ("express");
 const cors = require("cors")
 const routerApi = require("./routes")
+require('dotenv').config()
 
 // Inicializar app
 console.log("App de node funcionando")
@@ -11,7 +12,10 @@ connection()
 
 // Crear servidor Node
 const app = express()
-const puerto = 3900;
+// puerto de conexión localhost de archivo .env
+const puerto = process.env.PORT
+
+
 // Configurar cors
 app.use(cors());
 
